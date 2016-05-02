@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<notifications>
+     <notification>
+          <AppName>App Name</AppName>
+		  <PackageName>appname</PackageName>
+		  <Status>Critical</Status>
+		  <Notice>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Notice>
+          <modtime>Mon, 02 May 2016 19:33:21 UTC</modtime>
+     </notification>
+	 <notification>
+          <AppName>App Name</AppName>
+		  <PackageName>appname</PackageName>
+		  <Status>Critical</Status>
+		  <Notice>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Notice>
+          <modtime>Fri, 28 Apr 2016 19:33:21 UTC</modtime>
+     </notification>
+	 <notification>
+          <AppName>App Name</AppName>
+		  <PackageName>appname</PackageName>
+		  <Status>Non-critical</Status>
+		  <Notice>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Notice>
+          <modtime>Mon, 02 May 2016 19:33:21 UTC</modtime>
+     </notification>
+	 <notification>
+          <AppName>App Name</AppName>
+		  <PackageName>appname</PackageName>
+		  <Status>Non-critical</Status>
+		  <Notice>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Notice>
+          <modtime>Mon, 02 May 2016 19:33:21 UTC</modtime>
+     </notification>
+	 <notification>
+          <AppName>App Name</AppName>
+		  <PackageName>appname</PackageName>
+		  <Status>Non-critical</Status>
+		  <Notice>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Notice>
+          <modtime>Mon, 02 May 2016 19:33:21 UTC</modtime>
+     </notification>
+</notifications>
