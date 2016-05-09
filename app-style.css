@@ -17,7 +17,7 @@
 	width: 15%;
 	float: left;
 	position: relative;
-	min-height: 175px;
+	min-height: 185px;
 }
 
 .two-columns {
@@ -41,7 +41,7 @@
 	color: #ffffff;
 	font-size: 10px;
 	font-weight: bold;
-	padding: 5px 10px;
+	padding: 5px 5px;
 }
 
 .widget .widget-text {
@@ -58,7 +58,6 @@
 	background-color: #81cc77;
 	color: #ffffff;
 	float: right;
-	width: 20%;
 	text-align: center;
 }
 
@@ -67,8 +66,15 @@
 	background-color: #d81212;
 	color: #ffffff;
 	float: right;
-	width: 20%;
 	text-align: center;
+}
+
+.widget-on  h2 {
+	border: 5px solid #81cc77;
+}
+
+.widget-off  h2 {
+	border: 5px solid #d81212;
 }
 
 .change-now-link {
