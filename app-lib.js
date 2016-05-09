@@ -40,3 +40,92 @@ $(document).ready(function() {
 		$('#primary').css({ width: "94.8%" });
 	});
 });
+
+// Read in Notifications from XML
+function loadNotifications(){
+	var fso, f, f1, fc, s;
+	
+	// Get the "Notifications" folder where each individual xml file will exist
+	fso = new ActiveXObject("Scripting.FileSystemObject");
+	f = fso.GetFolder("C:\\ProgramData\\CDP\\SnapBack\\Notifications");
+	fc = new Enumerator(f.files);
+	var myCount=0;
+	var myArray = [];
+
+	s = "";
+
+	for (; !fc.atEnd(); fc.moveNext()){
+		// Set array with notifcation path and the date notification was created
+		myArray[myCount]={name:fc.item(),value:fc.item().DateCreated};;
+		myCount++;
+	}
+	
+	// Condition if no notifications exist
+	if (myCount == 0){
+		var div = document.getElementById('critical-notifications');
+		div.innerHTML = "<div class='notifications-none'>You have not notifications.</div>";
+	}
+
+	// Sort items based upon their Date Created
+	myArray.sort(function(a,b){
+		if ((a.value) > (b.value) ) { return -1; }
+		if ((a.value) < (b.value) ) { return 1; }
+		return 0;
+	});
+
+	// Parse each XML file
+	for (i=0; i<myCount; i++){
+		
+		// Get individual XML file
+		var xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+		var xmlFile = myArray[i].name;
+		xmlDoc.async="false";
+		xmlDoc.load(''+xmlFile+'');
+
+		// Load Data
+		var AppName = xmlDoc.getElementsByTagName('AppName')[0].firstChild.nodeValue;
+		var PackageName = xmlDoc.getElementsByTagName('PackageName')[0].firstChild.nodeValue;
+		var Status = xmlDoc.getElementsByTagName('Status')[0].firstChild.nodeValue;
+		var Notice = xmlDoc.getElementsByTagName('Notice')[0].firstChild.nodeValue;
+		
+		// Display Data
+		if (Status == "Critical") {
+			notiftxt = "<div class='notification critical'>";
+			notiftxt += "<h3>";
+			notiftxt += AppName;
+			notiftxt += "<span class='notification-date'>";
+			notiftxt += myArray[i].value;
+			notiftxt += "</span><span class='notification-status'>";
+			notiftxt += Status;
+			notiftxt += "</span></h3>";
+			notiftxt += "<div class='notification-text'>";
+			notiftxt += Notice;
+			notiftxt += "</div><div class='notification-link'><a href='../";
+			notiftxt += PackageName;
+			notiftxt += "/main.html' title='Go to this App now'>Go To App Now</a></div>";
+			notiftxt += "</div>"
+			notiftxt += "";
+			var div = document.getElementById('critical-notifications');
+			div.innerHTML = div.innerHTML + notiftxt;
+		}
+		else {
+			notiftxt = "<div class='notification'>";
+			notiftxt += "<h3>";
+			notiftxt += AppName;
+			notiftxt += "<span class='notification-date'>";
+			notiftxt += myArray[i].value;
+			notiftxt += "</span><span class='notification-status'>";
+			notiftxt += Status;
+			notiftxt += "</span></h3>";
+			notiftxt += "<div class='notification-text'>";
+			notiftxt += Notice;
+			notiftxt += "</div><div class='notification-link'><a href='../";
+			notiftxt += PackageName;
+			notiftxt += "/main.html' title='Go to this App now'>Go To App Now</a></div>";
+			notiftxt += "</div>"
+			notiftxt += "";
+			var div = document.getElementById('noncritical-notifications');
+			div.innerHTML = div.innerHTML + notiftxt;
+		}
+	}	
+}

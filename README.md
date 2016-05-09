@@ -8,5 +8,7 @@ Add any notes you may find pertinent
 
 Changelog
 ----
+05/09/2016, smadara, Revised widget layout, Addition of dynamic notifications
+
 05/02/2016, smadara, Initial Commit
 

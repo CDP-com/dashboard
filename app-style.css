@@ -13,13 +13,25 @@
 .widget {
 	border: 2px solid #9d9d9d;
 	background-color: #f1f1f1;
-	margin: 0 0 25px;
+	margin: 0 1% 25px;
+	width: 22%;
+	float: left;
+	position: relative;
+	min-height: 200px;
+}
+
+.two-columns {
+	width: 44%;
+}
+
+.three-columns {
+	width: 71%;
 }
 
 .widget h2 {
 	background-color: #1c4342;
 	color: #ffffff;
-	font-size: 18px;
+	font-size: 14px;
 	font-weight: bold;
 	padding: 5px 10px;
 }
@@ -28,16 +40,27 @@
 	padding: 10px;
 }
 
+.widget-link {
+	text-align: center;
+	display: block;
+}
+
 .status-on {
-	padding: 5px;
+	padding: 0px 5px;
 	background-color: #81cc77;
 	color: #ffffff;
+	float: right;
+	width: 40px;
+	text-align: center;
 }
 
 .status-off {
-	padding: 5px;
+	padding: 0px 5px;
 	background-color: #d81212;
 	color: #ffffff;
+	float: right;
+	width: 40px;
+	text-align: center;
 }
 
 .change-now-link {
@@ -93,6 +116,11 @@
 
 .notification-more {
 	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.notifications-none {
 	font-weight: bold;
 	text-align: center;
 }
