@@ -13,36 +13,44 @@
 .widget {
 	border: 2px solid #9d9d9d;
 	background-color: #f1f1f1;
-	margin: 0 1% 25px;
-	width: 22%;
+	margin: 0 .5% 10px;
+	width: 15%;
 	float: left;
 	position: relative;
-	min-height: 200px;
+	min-height: 175px;
 }
 
 .two-columns {
-	width: 44%;
+	width: 31.5%;
 }
 
 .three-columns {
-	width: 71%;
+	width: 47.5%;
+}
+
+.four-columns {
+	width: 64%;
+}
+
+.five-columns {
+	width: 80.5%;
 }
 
 .widget h2 {
 	background-color: #1c4342;
 	color: #ffffff;
-	font-size: 14px;
+	font-size: 10px;
 	font-weight: bold;
 	padding: 5px 10px;
 }
 
 .widget .widget-text {
 	padding: 10px;
+	font-size: 12px;
 }
 
 .widget-link {
-	text-align: center;
-	display: block;
+	color: #ffffff;
 }
 
 .status-on {
@@ -50,7 +58,7 @@
 	background-color: #81cc77;
 	color: #ffffff;
 	float: right;
-	width: 40px;
+	width: 20%;
 	text-align: center;
 }
 
@@ -59,7 +67,7 @@
 	background-color: #d81212;
 	color: #ffffff;
 	float: right;
-	width: 40px;
+	width: 20%;
 	text-align: center;
 }
 
@@ -83,10 +91,11 @@
 .notification h3 {
 	border-bottom: 2px solid #ffffff;
 	margin: 0 0 10px;
+	font-size: 14px;
 }
 
 .notification h3 .notification-date {
-	margin-left: 10px;
+	margin-left: 30px;
 	font-size: 12px;
 }
 
@@ -115,12 +124,7 @@
 }
 
 .notification-more {
-	font-size: 18px;
-	font-weight: bold;
-	text-align: center;
-}
-
-.notifications-none {
+	font-size: 14px;
 	font-weight: bold;
 	text-align: center;
 }
