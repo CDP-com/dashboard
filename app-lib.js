@@ -86,10 +86,10 @@ function loadNotifications(){
 			xmlDoc.load(''+xmlFile+'');
 
 			// Load Data
-			var AppName = xmlDoc.getElementsByTagName('AppName')[0].firstChild.nodeValue;
-			var PackageName = xmlDoc.getElementsByTagName('PackageName')[0].firstChild.nodeValue;
-			var Status = xmlDoc.getElementsByTagName('Status')[0].firstChild.nodeValue;
-			var Notice = xmlDoc.getElementsByTagName('Notice')[0].firstChild.nodeValue;
+			var AppName = unescape(xmlDoc.getElementsByTagName('AppName')[0].firstChild.nodeValue);
+			var PackageName = unescape(xmlDoc.getElementsByTagName('PackageName')[0].firstChild.nodeValue);
+			var Status = unescape(xmlDoc.getElementsByTagName('Status')[0].firstChild.nodeValue);
+			var Notice = unescape(xmlDoc.getElementsByTagName('Notice')[0].firstChild.nodeValue);
 			
 			// Display Data
 			if (Status == "Critical") {
